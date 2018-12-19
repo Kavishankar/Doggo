@@ -1,0 +1,43 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "ZXja1pB/YvDYcNpkp7AtOm1mhgk=",
+			"path": "github.com/google/go-querystring/query",
+			"revision": "44c6ddd0a2342c386950e880b658017258da92fc",
+			"revisionTime": "2018-09-16T13:16:37Z"
+		},
+		{
+			"checksumSHA1": "cvjI9qTLbU3EeFKz4j4ufchW+5Q=",
+			"path": "github.com/gorilla/mux",
+			"revision": "6137e193cdcba2725f16de84eaf0db2b769d9668",
+			"revisionTime": "2018-12-17T14:42:43Z"
+		},
+		{
+			"checksumSHA1": "Z5d6iobzHOfjLA4gE46ZE+CJAMg=",
+			"path": "github.com/jbogarin/go-cisco-webex-teams/sdk",
+			"revision": "758c23da78f5a12135cc49ca21a5286552fd9673",
+			"revisionTime": "2018-07-11T18:10:17Z"
+		},
+		{
+			"checksumSHA1": "oTNR9L9LxUzIkeRYUfOAUJgN83E=",
+			"path": "github.com/peterhellberg/link",
+			"revision": "6d32b8d78d1e440948a1c461c5abcc6bf7881641",
+			"revisionTime": "2018-01-24T23:37:05Z"
+		},
+		{
+			"checksumSHA1": "t43qYhxyCGEe6Oi5VhFDxTYSzZE=",
+			"path": "golang.org/x/net/publicsuffix",
+			"revision": "e147a9138326bc0e9d4e179541ffd8af41cff8a9",
+			"revisionTime": "2018-12-15T14:29:05Z"
+		},
+		{
+			"checksumSHA1": "BNhBsFc8oKDYAR/dUj41oc2PBqA=",
+			"path": "gopkg.in/resty.v1",
+			"revision": "a59932b061db030cf7edc11d970c8b6013d04a32",
+			"revisionTime": "2018-12-05T06:38:13Z"
+		}
+	],
+	"rootPath": "github.com/Kavishankar/Doggo"
+}
