@@ -12,6 +12,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/gorilla/mux"
 	webexteams "github.com/jbogarin/go-cisco-webex-teams/sdk"
@@ -57,12 +58,13 @@ var SecretStr string
 
 //Port - For Heroku Port
 var Port string
+var publicURL string
 
 //InitWebexClient - Setup Token for webexClient
 func InitWebexClient() {
 
 	token := os.Getenv("WEBEX_TOKEN")
-	publicURL := os.Getenv("PUBLIC_URL")
+	publicURL = os.Getenv("PUBLIC_URL")
 	if len(token) < 1 || len(publicURL) < 1 {
 		log.Fatal("Environmental variables not set!")
 		os.Exit(0)
@@ -234,6 +236,13 @@ func HandlePost(w http.ResponseWriter, r *http.Request) {
 
 }
 
+func keepAwake() {
+	for {
+		time.Sleep(time.Minute * 25)
+		_, _ = http.Get(publicURL)
+	}
+}
+
 func main() {
 
 	//Generate Webhook Secret
@@ -252,6 +261,7 @@ func main() {
 
 	//Starting the Server
 	fmt.Println("Starting the Server on Port", Port)
+	go keepAwake()
 	log.Fatal(http.ListenAndServe(":"+Port, router))
 
 }
